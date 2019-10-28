@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Identifying commercial centers using Points of Interest (POI) data
 
 You can use the [editor on GitHub](https://github.com/matrix-mayank/ATLAN/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
