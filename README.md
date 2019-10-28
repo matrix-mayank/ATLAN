@@ -1,6 +1,14 @@
 ## Identifying commercial centers using Points of Interest (POI) data
 
-Brief documentation on the identification of commerical centers/markets in the city chosen, New Delhi
+Brief documentation on the identification of commercial centers/markets in the city chosen, New Delhi (and the steps undertaken by me for the task)
+
+## Step 1 - Installing relevant Python libraries
+
+Installing necessary python libraries for GIS analysis. These included **shapely, fiona, pyproj, rtree** (and their binary wheels for Windows), followed by installation of **geopandas**. Furthermore, to extract OSM data, **overpy** was installed.
+
+## Step 2 - Understanding basic GIS concepts
+
+
 
 ### Markdown
 
