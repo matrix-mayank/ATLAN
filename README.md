@@ -21,11 +21,11 @@ a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. 
 b) Understanding multiple querying in OSM using **overpass turbo** (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) <br/>
 c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.
 
-![Image](osm.png)
-
 ## Step 4 - Plotting OSM data
 
 a) OSM lists converted to geodataframes and then to shapefiles, followed by plotting.
+
+![Image](osm.png)
 
 ## Step 5 - Clustering 
 
