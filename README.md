@@ -13,6 +13,8 @@ b) Importing latitude, longitude data for New Delhi followed by exploration of *
 c) Understanding and implementing GIS Projections (**EPSG:3035** and **EPSG:4326**) and selection of the most suitable projection. <br/>
 d) Creating a **basemap file** for New Delhi.
 
+![Image](delhi.png)
+
 ## Step 3 - Importing POI OSM Data for New Delhi
 
 a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. <br/>
@@ -46,10 +48,11 @@ Hence is it more beneficial to use DBSCAN Clustering for spatial clustering of g
 3. If a point is found to be a core point then the points within the ϵ neighborhood is also part of the cluster. So all the points found within ϵ neighborhood are added, along with their own ϵ neighborhood, if they are also core points. 
 4. The above process continues until the density-connected cluster is completely found. 
 5. The process restarts with a new point which can be a part of a new cluster or labeled as noise.
+
 ```markdown
-*Parameters used in DBSCAN Clustering*
-1. *MinPts* - The minimum number of points in each cluster. We set it to 3.
-2. *Epsilon* - Starting with an arbitrary point, it's ε-neighborhood is retrieved, and if it contains sufficiently many points, a cluster is started. Otherwise, the point is labeled as noise. We set it to 0.110 kms.
+Parameters used in DBSCAN Clustering
+1. MinPts - The minimum number of points in each cluster. We set it to 3.
+2. Epsilon - Starting with an arbitrary point, it's ε-neighborhood is retrieved, and if it contains sufficiently many points, a cluster is started. Otherwise, the point is labeled as noise. We set it to 0.110 kms.
 ```
 ### Why use the Haversine Metric over Euclidean Distance?
 The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Since the Earth is not flat, clustering based on the Euclidean Distance would provide innacurate results. As a result, we use the Haversine Metric. Point to be noted: the value of ε must be defined in radians as the Haversine Metric uses data in radians. For reference, 1 radian = 6371.0088 km
@@ -69,5 +72,3 @@ b) **Eliminating clusters with number of points lesser than the average number o
 c) **Eliminating clusters with area lesser than the average area of clusters** - We calculate the area of each cluster, find it's average and then eliminate the clusters having area less than the average cluster area. These clusters are visualised in the following bar graph:
 
 d)**Brute-force identification and naming of the most significant clusters** - From the top clusters in both categories, we look up the geographical coordinates on Google Maps to find out which are the 4 most significant clusters. As shown in visualization, these are Connaught Place, Saket, Malviya Nagar and Lajpat Nagar.
-
-[Link](url) and ![Image](src)
