@@ -27,9 +27,14 @@ a) OSM lists converted to geodataframes and then to shapefiles, followed by plot
 
 ### The Algorithm
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+1) The algorithm starts with an arbitrary point which has not been visited and its neighborhood information is retrieved from the ϵ parameter. \
+2) If this point contains MinPts within ϵ neighborhood, cluster formation starts. Otherwise the point is labeled as noise. This point can be later found within the ϵ neighborhood of a different point and, thus can be made a part of the cluster. Concept of density reachable and density connected points are important here. \
+3) If a point is found to be a core point then the points within the ϵ neighborhood is also part of the cluster. So all the points found within ϵ neighborhood are added, along with their own ϵ neighborhood, if they are also core points. \
+4) The above process continues until the density-connected cluster is completely found. \
+5) The process restarts with a new point which can be a part of a new cluster or labeled as noise.
 ```markdown
+```
+
 Syntax highlighted code block
 
 # Header 1
@@ -45,7 +50,7 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
