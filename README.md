@@ -8,15 +8,15 @@ Installing necessary python libraries for GIS analysis. These included **shapely
 
 ## Step 2 - Understanding basic GIS concepts
 
-a) Understanding how to create a point, line string and polygon using shapely. 
-b) Importing latitude, longitude data for New Delhi followed by exploration of **geodataframes** and **shapefiles**.
-c) Understanding and implementing GIS Projections (**EPSG:3035** and **EPSG:4326**) and selection of the most suitable projection. 
+a) Understanding how to create a point, line string and polygon using shapely. <br/>
+b) Importing latitude, longitude data for New Delhi followed by exploration of **geodataframes** and **shapefiles**.<br/>
+c) Understanding and implementing GIS Projections (**EPSG:3035** and **EPSG:4326**) and selection of the most suitable projection. <br/>
 d) Creating a **basemap file** for New Delhi.
 
 ## Step 3 - Importing POI OSM Data for New Delhi
 
-a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. 
-b) Understanding multiple querying in OSM using **overpass turbo** (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) 
+a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. <br/>
+b) Understanding multiple querying in OSM using **overpass turbo** (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) <br/>
 c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.
 
 ## Step 4 - Plotting OSM data
@@ -56,7 +56,7 @@ The haversine formula determines the great-circle distance between two points on
 
 ## Step 6 - Eliminating noise and plotting the shapefile clusters
 
-a) Points indicated by noise are labeled as -1 by the DBSCAN Algorithm. 
+a) Points indicated by noise are labeled as -1 by the DBSCAN Algorithm. <br/>
 b) We remove the noise points and store the resulting polygon file in shapefile format for plotting.
 
 
