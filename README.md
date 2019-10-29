@@ -10,20 +10,22 @@ Installing necessary python libraries for GIS analysis. These included **shapely
 
 a) Understanding how to create a point, line string and polygon using shapely. \
 b) Importing latitude, longitude data for New Delhi followed by exploration of geodataframes and shapefiles.\
-c) Understanding and implementing GIS Projections (EPSG:3035 and EPSG:4326) and selection of the most suitable projection.
+c) Understanding and implementing GIS Projections (EPSG:3035 and EPSG:4326) and selection of the most suitable projection. \
+d) Creating a basemap file for New Delhi.
 
-## Step 3 - Importing OSM Data for New Delhi
+## Step 3 - Importing POI OSM Data for New Delhi
 
 a) Understanding basic OSM concepts like nodes, ways and relations. \
 b) Understanding multiple querying in OSM using overpass turbo (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) \
-c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.\
-d) Creating a basemap file for New Delhi.
+c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.
 
 ## Step 4 - Plotting OSM data
 
-a) 
+a) OSM lists converted to geodataframes and then to shapefiles, followed by plotting.
 
-### Markdown
+## Step 5 - Clustering (DBSCAN)
+
+### The Algorithm
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
