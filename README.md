@@ -81,7 +81,7 @@ c) **Eliminating clusters with area lesser than the average area of clusters** -
 
 ![Image](bargraph2.png)
 
-d)**Brute-force identification and naming of the most significant clusters** - From the top clusters in both categories, we look up the geographical coordinates on Google Maps to find out which are the 4 most significant clusters. As shown in visualization, these are Connaught Place, Saket, Malviya Nagar and Lajpat Nagar.
+d) **Brute-force identification and naming of the most significant clusters** - From the top clusters in both categories, we look up the geographical coordinates on Google Maps to find out which are the 4 most significant clusters. As shown in visualization, these are Connaught Place, Saket, Malviya Nagar and Lajpat Nagar.
 
 ![Image](Visualization-01.png)
 
