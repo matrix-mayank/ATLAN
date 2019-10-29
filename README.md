@@ -1,4 +1,4 @@
-## Identifying commercial centers using Points of Interest (POI) data
+## **Identifying commercial centers using Points of Interest (POI) data**
 
 Brief documentation on the identification of commercial centers/markets in the city chosen, New Delhi (and the steps undertaken by me for the task)
 
@@ -41,15 +41,15 @@ The two main clustering techniques in focus - **K-Means Clustering** and **DBSCA
 Hence is it more beneficial to use DBSCAN Clustering for spatial clustering of geo-data. The algorithm is as follows:
 ### The DBSCAN Clustering Algorithm
 
-1) The algorithm starts with an arbitrary point which has not been visited and its neighborhood information is retrieved from the ϵ parameter. \
-2) If this point contains MinPts within ϵ neighborhood, cluster formation starts. Otherwise the point is labeled as noise. This point can be later found within the ϵ neighborhood of a different point and, thus can be made a part of the cluster. Concept of density reachable and density connected points are important here. \
-3) If a point is found to be a core point then the points within the ϵ neighborhood is also part of the cluster. So all the points found within ϵ neighborhood are added, along with their own ϵ neighborhood, if they are also core points. \
-4) The above process continues until the density-connected cluster is completely found. \
-5) The process restarts with a new point which can be a part of a new cluster or labeled as noise.
+1. The algorithm starts with an arbitrary point which has not been visited and its neighborhood information is retrieved from the ϵ parameter. \
+2. If this point contains MinPts within ϵ neighborhood, cluster formation starts. Otherwise the point is labeled as noise. This point can be later found within the ϵ neighborhood of a different point and, thus can be made a part of the cluster. Concept of density reachable and density connected points are important here. \
+3. If a point is found to be a core point then the points within the ϵ neighborhood is also part of the cluster. So all the points found within ϵ neighborhood are added, along with their own ϵ neighborhood, if they are also core points. \
+4. The above process continues until the density-connected cluster is completely found. \
+5. The process restarts with a new point which can be a part of a new cluster or labeled as noise.
 ```markdown
 *Parameters used in DBSCAN Clustering*
-1. **MinPts** - The minimum number of points in each cluster. We set it to 3.
-2. **Epsilon** - Starting with an arbitrary point, it's ε-neighborhood is retrieved, and if it contains sufficiently many points, a cluster is started. Otherwise, the point is labeled as noise. We set it to 0.110 kms.
+1. *MinPts* - The minimum number of points in each cluster. We set it to 3.
+2. *Epsilon* - Starting with an arbitrary point, it's ε-neighborhood is retrieved, and if it contains sufficiently many points, a cluster is started. Otherwise, the point is labeled as noise. We set it to 0.110 kms.
 ```
 ### Why use the Haversine Metric over Euclidean Distance?
 The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Since the Earth is not flat, clustering based on the Euclidean Distance would provide innacurate results. As a result, we use the Haversine Metric. Point to be noted: the value of ε must be defined in radians as the Haversine Metric uses data in radians.For reference, 1 radian = 6371.0088 km
