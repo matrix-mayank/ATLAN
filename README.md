@@ -51,6 +51,8 @@ Hence is it more beneficial to use DBSCAN Clustering for spatial clustering of g
 4. The above process continues until the density-connected cluster is completely found. 
 5. The process restarts with a new point which can be a part of a new cluster or labeled as noise.
 
+![Image](dbscan.png)
+
 ```markdown
 Parameters used in DBSCAN Clustering
 1. MinPts - The minimum number of points in each cluster. We set it to 3.
@@ -58,6 +60,8 @@ Parameters used in DBSCAN Clustering
 ```
 ### Why use the Haversine Metric over Euclidean Distance?
 The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Since the Earth is not flat, clustering based on the Euclidean Distance would provide innacurate results. As a result, we use the Haversine Metric. Point to be noted: the value of ε must be defined in radians as the Haversine Metric uses data in radians. For reference, 1 radian = 6371.0088 km
+
+![Image](cluster.png)
 
 ## Step 6 - Eliminating noise and plotting the shapefile clusters
 
@@ -71,7 +75,11 @@ a) **Silhouette Coefficient** - The silhouette score is calculated utilizing the
 
 b) **Eliminating clusters with number of points lesser than the average number of points in clusters** - We calculate the number of points in each cluster, find it's average and then eliminate the clusters having number of points less than the average number of points. These clusters are visualised in the following bar graph:
 
+![Image](bargraph1.png)
+
 c) **Eliminating clusters with area lesser than the average area of clusters** - We calculate the area of each cluster, find it's average and then eliminate the clusters having area less than the average cluster area. These clusters are visualised in the following bar graph:
+
+![Image](bargraph2.png)
 
 d)**Brute-force identification and naming of the most significant clusters** - From the top clusters in both categories, we look up the geographical coordinates on Google Maps to find out which are the 4 most significant clusters. As shown in visualization, these are Connaught Place, Saket, Malviya Nagar and Lajpat Nagar.
 
