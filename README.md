@@ -21,6 +21,8 @@ a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. 
 b) Understanding multiple querying in OSM using **overpass turbo** (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) <br/>
 c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.
 
+![Image](osm.png)
+
 ## Step 4 - Plotting OSM data
 
 a) OSM lists converted to geodataframes and then to shapefiles, followed by plotting.
@@ -72,3 +74,6 @@ b) **Eliminating clusters with number of points lesser than the average number o
 c) **Eliminating clusters with area lesser than the average area of clusters** - We calculate the area of each cluster, find it's average and then eliminate the clusters having area less than the average cluster area. These clusters are visualised in the following bar graph:
 
 d)**Brute-force identification and naming of the most significant clusters** - From the top clusters in both categories, we look up the geographical coordinates on Google Maps to find out which are the 4 most significant clusters. As shown in visualization, these are Connaught Place, Saket, Malviya Nagar and Lajpat Nagar.
+
+![Image](Visualization-01.png)
+
