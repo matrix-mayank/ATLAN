@@ -4,11 +4,24 @@ Brief documentation on the identification of commercial centers/markets in the c
 
 ## Step 1 - Installing relevant Python libraries
 
-Installing necessary python libraries for GIS analysis. These included **shapely, fiona, pyproj, rtree** (and their binary wheels for Windows), followed by installation of **geopandas**. Furthermore, to extract OSM data, **overpy** was installed.
+Installing necessary python libraries for GIS analysis. These included **shapely, fiona, pyproj, rtree** (and their binary wheels for Windows), followed by installation of **geopandas**. Additionally, to extract OSM data, **overpy** was installed.
 
 ## Step 2 - Understanding basic GIS concepts
 
+a) Understanding how to create a point, line string and polygon using shapely. \
+b) Importing latitude, longitude data for New Delhi followed by exploration of geodataframes and shapefiles.\
+c) Understanding and implementing GIS Projections (EPSG:3035 and EPSG:4326) and selection of the most suitable projection.
 
+## Step 3 - Importing OSM Data for New Delhi
+
+a) Understanding basic OSM concepts like nodes, ways and relations. \
+b) Understanding multiple querying in OSM using overpass turbo (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) \
+c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.\
+d) Creating a basemap file for New Delhi.
+
+## Step 4 - Plotting OSM data
+
+a) 
 
 ### Markdown
 
