@@ -8,15 +8,15 @@ Installing necessary python libraries for GIS analysis. These included **shapely
 
 ## Step 2 - Understanding basic GIS concepts
 
-a) Understanding how to create a point, line string and polygon using shapely. \
-b) Importing latitude, longitude data for New Delhi followed by exploration of **geodataframes** and **shapefiles**.\
-c) Understanding and implementing GIS Projections (**EPSG:3035** and **EPSG:4326**) and selection of the most suitable projection. \
+a) Understanding how to create a point, line string and polygon using shapely. 
+b) Importing latitude, longitude data for New Delhi followed by exploration of **geodataframes** and **shapefiles**.
+c) Understanding and implementing GIS Projections (**EPSG:3035** and **EPSG:4326**) and selection of the most suitable projection. 
 d) Creating a **basemap file** for New Delhi.
 
 ## Step 3 - Importing POI OSM Data for New Delhi
 
-a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. \
-b) Understanding multiple querying in OSM using **overpass turbo** (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) \
+a) Understanding basic OSM concepts like **nodes**, **ways** and **relations**. 
+b) Understanding multiple querying in OSM using **overpass turbo** (map features- amenities & shops identified from OSM Wiki: https://wiki.openstreetmap.org/wiki/Map_Features) 
 c) Querying the relation New Delhi (https://www.openstreetmap.org/relation/1942586) for the most important POIs and storage of location data in python lists.
 
 ## Step 4 - Plotting OSM data
@@ -41,10 +41,10 @@ The two main clustering techniques in focus - **K-Means Clustering** and **DBSCA
 Hence is it more beneficial to use DBSCAN Clustering for spatial clustering of geo-data. The algorithm is as follows:
 ### The DBSCAN Clustering Algorithm
 
-1. The algorithm starts with an arbitrary point which has not been visited and its neighborhood information is retrieved from the ϵ parameter. \
-2. If this point contains MinPts within ϵ neighborhood, cluster formation starts. Otherwise the point is labeled as noise. This point can be later found within the ϵ neighborhood of a different point and, thus can be made a part of the cluster. Concept of density reachable and density connected points are important here. \
-3. If a point is found to be a core point then the points within the ϵ neighborhood is also part of the cluster. So all the points found within ϵ neighborhood are added, along with their own ϵ neighborhood, if they are also core points. \
-4. The above process continues until the density-connected cluster is completely found. \
+1. The algorithm starts with an arbitrary point which has not been visited and its neighborhood information is retrieved from the ϵ parameter. 
+2. If this point contains MinPts within ϵ neighborhood, cluster formation starts. Otherwise the point is labeled as noise. This point can be later found within the ϵ neighborhood of a different point and, thus can be made a part of the cluster. Concept of density reachable and density connected points are important here. 
+3. If a point is found to be a core point then the points within the ϵ neighborhood is also part of the cluster. So all the points found within ϵ neighborhood are added, along with their own ϵ neighborhood, if they are also core points. 
+4. The above process continues until the density-connected cluster is completely found. 
 5. The process restarts with a new point which can be a part of a new cluster or labeled as noise.
 ```markdown
 *Parameters used in DBSCAN Clustering*
@@ -52,11 +52,11 @@ Hence is it more beneficial to use DBSCAN Clustering for spatial clustering of g
 2. *Epsilon* - Starting with an arbitrary point, it's ε-neighborhood is retrieved, and if it contains sufficiently many points, a cluster is started. Otherwise, the point is labeled as noise. We set it to 0.110 kms.
 ```
 ### Why use the Haversine Metric over Euclidean Distance?
-The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Since the Earth is not flat, clustering based on the Euclidean Distance would provide innacurate results. As a result, we use the Haversine Metric. Point to be noted: the value of ε must be defined in radians as the Haversine Metric uses data in radians.For reference, 1 radian = 6371.0088 km
+The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Since the Earth is not flat, clustering based on the Euclidean Distance would provide innacurate results. As a result, we use the Haversine Metric. Point to be noted: the value of ε must be defined in radians as the Haversine Metric uses data in radians. For reference, 1 radian = 6371.0088 km
 
 ## Step 6 - Eliminating noise and plotting the shapefile clusters
 
-a) Points indicated by noise are labeled as -1 by the DBSCAN Algorithm. \
+a) Points indicated by noise are labeled as -1 by the DBSCAN Algorithm. 
 b) We remove the noise points and store the resulting polygon file in shapefile format for plotting.
 
 
