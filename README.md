@@ -1,6 +1,6 @@
 ## **Identifying commercial centers using Points of Interest (POI) data**
 
-Brief documentation on the identification of commercial centers/markets in the city chosen, New Delhi (and the steps undertaken by me for the task)
+Brief documentation on the identification of commercial centers/markets in New Delhi.
 
 ## Step 1 - Installing relevant Python libraries
 
